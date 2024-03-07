@@ -4,7 +4,6 @@ import "./globals.css";
 import {cn} from "@/lib/utils";
 import {ThemeProvider} from "@/lib/providers/theme-provider";
 import {Toaster} from "@/components/ui/sonner"
-import {AuthSessionProvider} from "@/lib/providers/auth-provider";
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -12,8 +11,8 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-    title: "Nextjs Template",
-    description: "Nextjs Template",
+    title: "Warden",
+    description: "Warden",
     robots: "follow, index",
 };
 
@@ -30,17 +29,15 @@ export default function RootLayout({
                 fontSans.variable
             )}
         >
-        <AuthSessionProvider>
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-            >
-                {children}
-                <Toaster/>
-            </ThemeProvider>
-        </AuthSessionProvider>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
+            {children}
+            <Toaster/>
+        </ThemeProvider>
         </body>
         </html>
     );
