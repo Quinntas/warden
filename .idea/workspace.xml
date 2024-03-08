@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login/_components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/_components/login-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/signup/_components/signup-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_components/signup-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[pid]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[pid]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/video-player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/video-player.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,7 @@
       <workItem from="1709846327168" duration="2451000" />
       <workItem from="1709848801857" duration="12671000" />
       <workItem from="1709917502303" duration="7254000" />
-      <workItem from="1709925013661" duration="1694000" />
+      <workItem from="1709925013661" duration="3052000" />
     </task>
     <servers />
   </component>

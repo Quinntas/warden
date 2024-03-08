@@ -33,6 +33,7 @@ export function VideoPlayer(props: VideoPlayerProps) {
             onEnded={() => props.onEnded && props.onEnded()}
             playsinline
             controls
+            volume={0.5}
             ref={ref}
             width={"100%"}
             height={"100%"}

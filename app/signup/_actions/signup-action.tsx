@@ -16,7 +16,7 @@ export const signUp = async (values: z.infer<typeof signupSchema>) => {
     try {
         await db.insert(userTable).values({
             id: userId,
-            avatar: "",
+            avatar: "https://i.imgur.com/WxNkK7J_d.webp?maxwidth=760&fidelity=grand",
             username: values.username,
             email: values.email,
             hashed_password: hashed_password,

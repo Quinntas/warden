@@ -6,13 +6,14 @@ import {Suspense} from "react";
 import {LessonMeta} from "@/app/course/[slug]/lesson/[pid]/_components/lesson-meta";
 import {LessonNav} from "@/app/course/[slug]/lesson/[pid]/_components/lesson-nav";
 
-export default function Lesson() {
+export default async function Lesson() {
     return <PageBox>
         <Navbar/>
 
         <Suspense>
-            <div className={"w-[100%] h-[300px]"}>
-                <VideoPlayer url={"https://www.youtube.com/watch?v=gRAVZv7V91Q&ab_channel=leddoo"}/>
+            <div className={"w-[100%] h-[300px] lg:h-[600px]"}>
+                <VideoPlayer
+                    url={"https://ueqradle8xowa5dj.public.blob.vercel-storage.com/test/test-TyHMigdUff0XLHDvWFGRQEfbF62jsm.mp4"}/>
             </div>
         </Suspense>
 
