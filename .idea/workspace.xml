@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="" />
+    <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/lucia-database-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/lucia-database-adapter.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +57,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.5",
-    "last_opened_file_path": "C:/Users/quintas/Documents/Gitpica/warden/app/signup",
+    "last_opened_file_path": "C:/Users/quintas/Documents/Gitpica/warden_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -62,7 +66,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "C:\\Users\\quintas\\Documents\\Gitpica\\warden\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\quintas\\Documents\\Gitpica\\warden_2\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -99,6 +103,7 @@
       <workItem from="1709846327168" duration="2451000" />
       <workItem from="1709848801857" duration="12671000" />
       <workItem from="1709917502303" duration="7254000" />
+      <workItem from="1709925013661" duration="300000" />
     </task>
     <servers />
   </component>

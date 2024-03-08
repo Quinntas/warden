@@ -6,7 +6,7 @@ import * as schema from "@/lib/database/database-tables";
 import {sessionTable, userTable} from "@/lib/database/database-tables";
 
 const pool = new pg.Pool({
-    connectionString: process.env.DATABASE_URL
+    connectionString: process.env.POSTGRES_URL_NO_SSL
 });
 
 export const db = drizzle(pool, {schema});
