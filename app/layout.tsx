@@ -4,6 +4,8 @@ import "./globals.css";
 import {cn} from "@/lib/utils";
 import {ThemeProvider} from "@/lib/providers/theme-provider";
 import {Toaster} from "@/components/ui/sonner"
+import {Analytics} from "@vercel/analytics/react"
+import {SpeedInsights} from "@vercel/speed-insights/next"
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -35,10 +37,12 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
         >
-            
+
             {children}
             <Toaster/>
         </ThemeProvider>
+        <Analytics/>
+        <SpeedInsights/>
         </body>
         </html>
     );
