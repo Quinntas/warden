@@ -1,39 +1,39 @@
 "use client"
 
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {useState} from "react";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
+import {signupSchema} from "@/lib/types/zod/signup-schema";
+import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import {z} from "zod";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {toast} from "sonner";
-import {loginSchema} from "@/lib/types/zod/login-schema";
-import {login} from "@/app/login/_actions/login-action";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import Link from "next/link";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {signUp} from "@/app/signup/_actions/signup-action";
+import {toast} from "sonner"
+import {useState} from "react";
 import {useRouter} from "next/navigation";
 
-
-export function LoginForm() {
+export function SignupForm() {
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const router = useRouter()
 
-    const form = useForm<z.infer<typeof loginSchema>>({
-        resolver: zodResolver(loginSchema),
+    const form = useForm<z.infer<typeof signupSchema>>({
+        resolver: zodResolver(signupSchema),
         defaultValues: {
+            username: "",
             email: "",
             password: "",
+            passwordConfirmation: "",
         },
     })
 
-    async function onSubmit(values: z.infer<typeof loginSchema>) {
+    async function onSubmit(values: z.infer<typeof signupSchema>) {
         setIsLoading(true)
-        const res = await login(values)
+        const res = await signUp(values)
         if (res.error) {
             toast(res.error)
         } else {
-            toast("Logged in successfully")
+            toast("Account created successfully")
         }
         return router.push('/')
     }
@@ -43,7 +43,7 @@ export function LoginForm() {
             <CardTitle>
                 <div className="flex flex-col space-y-2 text-center">
                     <h1 className="text-2xl font-semibold tracking-tight">
-                        Login to your account
+                        Create your account
                     </h1>
                     <p className="text-sm text-muted-foreground">
                         Enter your information below
@@ -54,6 +54,20 @@ export function LoginForm() {
         <CardContent>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-[15px]">
+                    <FormField
+                        control={form.control}
+                        name="username"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel>Username</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="John Doe" disabled={isLoading} {...field} />
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+
                     <FormField
                         control={form.control}
                         name="email"
@@ -68,6 +82,7 @@ export function LoginForm() {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name="password"
@@ -81,13 +96,23 @@ export function LoginForm() {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" className={"w-full"} disabled={isLoading}>Submit</Button>
+
+                    <FormField
+                        control={form.control}
+                        name="passwordConfirmation"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel>Confirm Password</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="*******" type={"password"} disabled={isLoading} {...field} />
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+                    <Button type="submit" disabled={isLoading}>Submit</Button>
                 </form>
             </Form>
-            <div className={"flex items-center gap-1 justify-between text-sm mt-[15px]"}>
-                <span>Dont have a account?</span>
-                <Link href={"/signup"} className={"font-semibold"}>Create one</Link>
-            </div>
         </CardContent>
     </Card>
 }

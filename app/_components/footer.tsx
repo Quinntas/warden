@@ -5,7 +5,7 @@ export function Footer() {
     return <footer className={"flex flex-col gap-[15px] mt-[50px]"}>
         <Separator/>
 
-        <div className={"flex items-center justify-between text-[12px] text-muted-foreground px-[5px]"}>
+        <div className={"flex items-center justify-between text-[12px] text-muted-foreground px-[4px]"}>
             <Link href={"#"}>@http_quintas</Link>
             <div className={"flex gap-1"}>
                 <Link href={"#"}>
