@@ -7,7 +7,7 @@ interface PageBoxProps {
 
 export function PageBox(props: PageBoxProps) {
     return <div
-        className={cn("px-[20px] sm:px-[20%] pb-[20px] sm:pb-0 pt-[20px] sm:pt-[50px] flex justify-between flex-col gap-[15px] ", props.className)}>
+        className={cn("px-[20px] sm:px-[20%] pb-[20px] pt-[20px] sm:pt-[50px] flex justify-between flex-col gap-[20px] ", props.className)}>
         {props.children}
     </div>
 }

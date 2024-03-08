@@ -1,57 +1,34 @@
+"use client"
+
 import {Card, CardContent, CardHeader} from "@/components/ui/card";
-import {ReactNode} from "react";
 import {FaNodeJs} from "react-icons/fa6";
 import {SiTypescript} from "react-icons/si";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
 import {cn} from "@/lib/utils";
-
-function TechnologyIcon({icon}: { icon: ReactNode }) {
-    return <Button variant={"outline"}
-                   disabled={true}
-                   size={"icon"}
-                   className={"opacity-30 group-hover:border-white ease-in-out transition-all border-dashed group-hover:opacity-100"}>
-        {icon}
-    </Button>
-}
-
-
-function StatusBadge({status}: { status: "free" | "coming-soon" | "paid" }) {
-    function getBadge() {
-        switch (status) {
-            case "free":
-                return <Badge className={"bg-green-500"}>
-                    <span className={"font-semibold"}>Free</span>
-                </Badge>
-            case "coming-soon":
-                return <Badge className={"bg-purple-500"}>
-                    <span className={"font-semibold"}>Coming Soon</span>
-                </Badge>
-            case "paid":
-                return <Badge>
-                    <span className={"font-semibold"}>R$ 60.00</span>
-                </Badge>
-        }
-    }
-
-    return <>
-        {getBadge()}
-    </>
-}
+import {CourseStatusBadge} from "@/app/_components/course/course-status-badge";
+import {DashedButton} from "@/app/_components/course/dashed-button";
+import {useRouter} from "next/navigation";
 
 interface CourseCardProps {
     className?: string;
 }
 
 export function CourseCard(props: CourseCardProps) {
-    return <Card className={cn("group shadow w-full", props.className)}>
+    const router = useRouter()
+
+    return <Card className={cn("group w-full cursor-pointer", props.className)} onClick={() => {
+        router.push("/course/1")
+    }}>
         <CardHeader>
             <div className={"flex items-center justify-between"}>
                 <div className={"flex gap-1"}>
-                    <TechnologyIcon icon={<FaNodeJs size={20}/>}/>
-                    <TechnologyIcon icon={<SiTypescript size={20}/>}/>
+                    <DashedButton>
+                        <FaNodeJs size={20}/>
+                    </DashedButton>
+                    <DashedButton>
+                        <SiTypescript size={20}/>
+                    </DashedButton>
                 </div>
-                <StatusBadge status={"free"}/>
+                <CourseStatusBadge status={"free"}/>
             </div>
         </CardHeader>
         <CardContent>
