@@ -4,7 +4,7 @@ export default defineConfig({
     schema: "./lib/database/database-tables.ts",
     driver: 'pg',
     dbCredentials: {
-        connectionString: process.env.POSTGRES_URL_NO_SSL!,
+        connectionString: process.env.POSTGRES_URL!,
     },
     verbose: true,
     strict: true,
