@@ -32,10 +32,11 @@ export function LoginForm() {
         const res = await login(values)
         if (res.error) {
             toast(res.error)
+            setIsLoading(false)
         } else {
             toast("Logged in successfully")
+            return router.push('/')
         }
-        return router.push('/')
     }
 
     return <Card>

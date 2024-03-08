@@ -32,10 +32,11 @@ export function SignupForm() {
         const res = await signUp(values)
         if (res.error) {
             toast(res.error)
+            setIsLoading(false)
         } else {
             toast("Account created successfully")
+            return router.push('/')
         }
-        return router.push('/')
     }
 
     return <Card>
