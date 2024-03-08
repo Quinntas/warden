@@ -17,6 +17,8 @@ import Link from "next/link";
 import {MoonIcon, SunIcon} from "@radix-ui/react-icons";
 import {DatabaseUserAttributes} from "@/lib/auth/lucia";
 import React from "react";
+import {logout} from "@/lib/auth/_actions/logout";
+import {toast} from "sonner";
 
 interface UserNavProps {
     user: DatabaseUserAttributes
@@ -31,10 +33,10 @@ export function UserNav(props: UserNavProps) {
                 variant="ghost"
                 size={"icon"}
                 className="flex items-center ">
-                <Avatar className="h-[35px] w-[35px] border">
+                <Avatar className="h-[40px] w-[40px] border">
                     <AvatarImage src={props.user.avatar} alt="@avatar"/>
                     <AvatarFallback>
-                        {props.user.username}
+                        {props.user.username.split(' ')[0]}
                     </AvatarFallback>
                 </Avatar>
             </Button>
@@ -66,7 +68,15 @@ export function UserNav(props: UserNavProps) {
                 <span>API</span>
             </DropdownMenuItem>
             <DropdownMenuSeparator/>
-            <DropdownMenuItem className={"cursor-pointer"}>
+            <DropdownMenuItem className={"cursor-pointer"} onClick={() => {
+                logout().then((res) => {
+                    if (res.error) {
+                        toast(res.error)
+                    } else {
+                        toast("Logged out")
+                    }
+                })
+            }}>
                 <LogOut className="mr-2 h-4 w-4"/>
                 <span>Log out</span>
                 <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>

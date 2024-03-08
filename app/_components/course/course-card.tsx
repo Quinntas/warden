@@ -15,7 +15,7 @@ interface CourseCardProps {
 export function CourseCard(props: CourseCardProps) {
     const router = useRouter()
 
-    return <Card className={cn("group w-full cursor-pointer", props.className)} onClick={() => {
+    return <Card className={cn("group w-full cursor-pointer bg-grid-default", props.className)} onClick={() => {
         router.push("/course/1")
     }}>
         <CardHeader>

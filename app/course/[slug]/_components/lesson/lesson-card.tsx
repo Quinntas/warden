@@ -8,7 +8,7 @@ export function LessonCard() {
     const router = useRouter()
 
     return <Card
-        className={"group cursor-pointer"}
+        className={"group cursor-pointer bg-grid-default"}
         onClick={() => {
             router.push("/course/1/lesson/1")
         }}>

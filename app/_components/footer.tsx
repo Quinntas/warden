@@ -1,20 +1,16 @@
 import {Separator} from "@/components/ui/separator";
-import Link from "next/link";
+import {Linker} from "@/components/linker";
 
 export function Footer() {
-    return <footer className={"flex flex-col gap-[15px] mt-[50px]"}>
+    return <footer className={"flex flex-col gap-[15px] sm:mt-[50px] mt-[20px]"}>
         <Separator/>
 
         <div className={"flex items-center justify-between text-[12px] text-muted-foreground px-[4px]"}>
-            <Link href={"#"}>@http_quintas</Link>
+            <Linker target={"_blank"} href={"https://twitter.com/https_quintas"} text={"@https_quintas"}/>
             <div className={"flex gap-1"}>
-                <Link href={"#"}>
-                    <span>Terms of use</span>
-                </Link>
+                <Linker href={"#"} text={"Terms of use"}/>
                 <span>/</span>
-                <Link href={"#"}>
-                    <span>Privacy Policy</span>
-                </Link>
+                <Linker href={"#"} text={"Privacy Policy"}/>
             </div>
         </div>
     </footer>

@@ -7,11 +7,13 @@ import {SiTypescript} from "react-icons/si";
 import {CourseOverviewCard} from "@/app/course/[slug]/_components/course-overview-card";
 
 export function CoursePresentation() {
-    return <div className={"flex flex-col sm:flex-row gap-[30px] sm:gap-[20px] items-center justify-between"}>
-        <div className={"flex flex-col gap-[30px] sm:gap-[20px]"}>
-            <h1 className={"font-bold text-2xl"}>Node.js and TypeScript </h1>
-            <p className={"text-muted-foreground"}>Learn how to build a REST API using Node.js and
-                TypeScript</p>
+    return <div
+        className={"flex flex-col sm:flex-row gap-[30px] sm:gap-[20px] items-center justify-between mt-[30px] sm:mt-0"}>
+        <div className={"flex flex-col gap-[25px] sm:gap-[20px] max-w-full sm:max-w-1/2"}>
+            <h1 className={"font-bold text-2xl line-clamp-3"}>Node.js and TypeScript</h1>
+            <p className={"text-muted-foreground line-clamp-4 h-auto"}>Learn how to build a REST API using Node.js and
+                TypeScript
+            </p>
 
             <div className={"flex gap-[15px]"}>
                 <FaNodeJs size={25}/>

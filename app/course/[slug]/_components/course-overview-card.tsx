@@ -7,7 +7,7 @@ import {FaCode} from "react-icons/fa6";
 
 export function CourseOverviewCard() {
     return (
-        <Card className={"w-full sm:w-auto"}>
+        <Card className={"w-full sm:w-fit"}>
             <CardHeader>
                 <CardTitle><span className={"text-lg truncate"}>COURSE OVERVIEW</span></CardTitle>
             </CardHeader>
