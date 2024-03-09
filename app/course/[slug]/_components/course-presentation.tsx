@@ -32,7 +32,7 @@ export async function CoursePresentation(props: CoursePresentationProps) {
                     <CourseStudentBadge count={course.course!.enrolled}/>
                 </Suspense>
 
-                <CourseReviewsCount course_id={course.course.id}/>
+                <CourseReviewsCount courseSlug={course.course.slug}/>
             </div>
 
             <Suspense>

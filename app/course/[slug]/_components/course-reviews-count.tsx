@@ -3,11 +3,11 @@ import {CourseReviewStar} from "@/app/course/[slug]/_components/course-review-st
 import {getCourseReviews} from "@/lib/course/getCourseReviews";
 
 interface CourseReviewsCountProps {
-    course_id: string
+    courseSlug: string
 }
 
 export async function CourseReviewsCount(props: CourseReviewsCountProps) {
-    const reviews = await getCourseReviews(props.course_id)
+    const reviews = await getCourseReviews(props.courseSlug)
 
     if (reviews.isError) return <p>{reviews.error}</p>
 
