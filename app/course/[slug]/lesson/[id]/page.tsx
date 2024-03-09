@@ -5,6 +5,7 @@ import {validateSession} from "@/lib/auth/validate-session";
 import {getEnrolledStudent} from "@/lib/course/getEnrolledStudent";
 import {redirect} from "next/navigation";
 import {LessonBox} from "@/app/course/[slug]/lesson/[id]/_components/lesson-box";
+import {Suspense} from "react";
 
 export default async function Lesson({params}: { params: { slug: string, id: string } }) {
     const {user} = await validateSession()
@@ -17,7 +18,9 @@ export default async function Lesson({params}: { params: { slug: string, id: str
     return <PageBox>
         <Navbar/>
 
-        <LessonBox slug={params.slug} id={params.id} isEnrolled={enrolled.isEnrolled!}/>
+        <Suspense>
+            <LessonBox slug={params.slug} id={params.id} isEnrolled={enrolled.isEnrolled!}/>
+        </Suspense>
 
         <Footer/>
     </PageBox>

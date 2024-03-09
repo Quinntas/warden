@@ -10,7 +10,9 @@ export default async function Course({params}: { params: { slug: string } }) {
     return <PageBox>
         <Navbar/>
 
-        <CoursePresentation slug={params.slug}/>
+        <Suspense>
+            <CoursePresentation slug={params.slug}/>
+        </Suspense>
 
         <Suspense>
             <CourseLessonBox courseSlug={params.slug}/>
