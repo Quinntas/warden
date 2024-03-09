@@ -3,15 +3,15 @@
 import {z} from "zod";
 import {signupSchema} from "@/lib/types/zod/signup-schema";
 import {Argon2id} from "oslo/password";
-import {generateId} from "lucia";
 import {db} from "@/lib/database/lucia-database-adapter";
 import {userTable} from "@/lib/database/database-tables";
 import {lucia} from "@/lib/auth/lucia";
 import {cookies} from "next/headers";
+import {v4} from "uuid";
 
 export const signUp = async (values: z.infer<typeof signupSchema>) => {
     const hashed_password = await new Argon2id().hash(values.password)
-    const userId = generateId(20)
+    const userId = v4()
 
     try {
         await db.insert(userTable).values({

@@ -12,7 +12,9 @@ export default async function Course({params}: { params: { slug: string } }) {
 
         <CoursePresentation slug={params.slug}/>
 
-        <CourseLessonBox/>
+        <Suspense>
+            <CourseLessonBox courseSlug={params.slug}/>
+        </Suspense>
 
         <Suspense>
             <CourseReviewsBox courseSlug={params.slug}/>

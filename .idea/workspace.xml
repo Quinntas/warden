@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/_components/course/course-status-badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-status-badge.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-lesson-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-lesson-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/lesson/lesson-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/lesson/lesson-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[pid]/_components/lesson-meta.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[pid]/_components/lesson-nav.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[pid]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/signup/_actions/signup-action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/signup/_actions/signup-action.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/database-tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/database-tables.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +67,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.5",
-    "last_opened_file_path": "C:/Users/quintas/Documents/Gitpica/warden_2",
+    "last_opened_file_path": "C:/Users/quintas/Documents/Gitpica/warden_2/lib/course",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,6 +91,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\quintas\Documents\Gitpica\warden_2\lib\course" />
       <recent name="C:\Users\quintas\Documents\Gitpica\warden\app\signup" />
       <recent name="C:\Users\quintas\Documents\Gitpica\warden\app" />
       <recent name="C:\Users\quintas\Documents\Gitpica\warden" />
@@ -101,7 +114,9 @@
       <workItem from="1709846327168" duration="2451000" />
       <workItem from="1709848801857" duration="12671000" />
       <workItem from="1709917502303" duration="7254000" />
-      <workItem from="1709925013661" duration="20124000" />
+      <workItem from="1709925013661" duration="20194000" />
+      <workItem from="1709990360880" duration="4204000" />
+      <workItem from="1709994605883" duration="1342000" />
     </task>
     <servers />
   </component>

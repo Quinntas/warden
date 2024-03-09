@@ -48,6 +48,7 @@ export const lessonTable = pgTable("lesson", {
     videoUrl: text("video").notNull(),
     courseId: text("course_id").notNull().references(() => courseTable.id),
     viewCount: integer("view_count").notNull().default(0),
+    duration: integer("duration").notNull().default(0),
     order: integer("order").notNull().default(0),
     created_at: timestamp("created_at", {mode: 'date', withTimezone: true}).defaultNow().notNull(),
     updated_at: timestamp("updated_at", {mode: 'date', withTimezone: true}).defaultNow().notNull()

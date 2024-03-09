@@ -7,13 +7,14 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
-    "postbuild": "pnpm next-sitemap",
+    "postbuild": "next-sitemap",
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@lucia-auth/adapter-drizzle": "^1.0.2",
+    "@monaco-editor/react": "^4.6.0",
     "@node-rs/argon2": "^1.8.0",
     "@node-rs/bcrypt": "^1.10.0",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -46,6 +47,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/pg": "^8.11.2",
+    "@types/uuid": "^9.0.8",
     "@vercel/analytics": "^1.2.2",
     "@vercel/blob": "^0.22.1",
     "@vercel/speed-insights": "^1.0.10",
@@ -81,6 +83,7 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^2.14.0",
+    "uuid": "^9.0.1",
     "vaul": "^0.9.0",
     "zod": "^3.22.4"
   },
