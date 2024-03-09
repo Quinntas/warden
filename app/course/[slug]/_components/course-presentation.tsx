@@ -36,7 +36,7 @@ export async function CoursePresentation(props: CoursePresentationProps) {
             </div>
 
             <Suspense>
-                <CourseEnroll/>
+                <CourseEnroll price={course.course.price}/>
             </Suspense>
 
             <Suspense>

@@ -31,7 +31,7 @@ export function CourseCard(props: CourseCardProps) {
                         </DashedButton>
                     })}
                 </div>
-                <CourseStatusBadge status={"free"}/>
+                <CourseStatusBadge price={props.price}/>
             </div>
         </CardHeader>
         <CardContent>
