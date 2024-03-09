@@ -15,7 +15,7 @@ export default async function Course({params}: { params: { slug: string } }) {
         <CourseLessonBox/>
 
         <Suspense>
-            <CourseReviewsBox/>
+            <CourseReviewsBox courseSlug={params.slug}/>
         </Suspense>
 
         <Footer/>

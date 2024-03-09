@@ -2,9 +2,15 @@ import {Linker} from "@/components/linker";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import React from "react";
 import {getCourseTeacher} from "@/lib/course/getCourseTeacher";
+import {dateToDDMMYYYY} from "@/lib/utils";
 
-export async function CourseTeacher() {
-    const teacher = await getCourseTeacher("l9rf5ywvoxmqv7ca8ts3")
+interface CourseTeacherProps {
+    updated_at: Date
+    teacherId: string
+}
+
+export async function CourseTeacher(props: CourseTeacherProps) {
+    const teacher = await getCourseTeacher(props.teacherId)
 
     if (teacher.isError) return <p>{teacher.error}</p>
 
@@ -21,7 +27,7 @@ export async function CourseTeacher() {
                 <span>Taught by</span>
                 <Linker href={"#"} text={teacher.teacher!.username!} className={"font-bold text-purple-500"}/>
             </div>
-            <span className={"text-muted-foreground"}>Last updated: Jan 05 2024</span>
+            <span className={"text-muted-foreground"}>Last updated: {dateToDDMMYYYY(props.updated_at)}</span>
         </div>
     </div>
 }

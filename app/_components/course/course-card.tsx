@@ -1,19 +1,18 @@
 "use client"
 
 import {Card, CardContent, CardHeader} from "@/components/ui/card";
-import {FaNodeJs} from "react-icons/fa6";
-import {SiTypescript} from "react-icons/si";
 import {cn} from "@/lib/utils";
 import {CourseStatusBadge} from "@/app/_components/course/course-status-badge";
 import {DashedButton} from "@/app/_components/course/dashed-button";
 import {useRouter} from "next/navigation";
+import {getCategoryIcon} from "@/lib/categories/categories-map";
 
 interface CourseCardProps {
     className?: string;
     price: number
     title: string
     description: string
-    categories: string[]
+    categories: { id: string, name: string }[]
     slug: string
 }
 
@@ -26,12 +25,11 @@ export function CourseCard(props: CourseCardProps) {
         <CardHeader>
             <div className={"flex items-center justify-between"}>
                 <div className={"flex gap-1"}>
-                    <DashedButton>
-                        <FaNodeJs size={20}/>
-                    </DashedButton>
-                    <DashedButton>
-                        <SiTypescript size={20}/>
-                    </DashedButton>
+                    {props.categories.map((category, index) => {
+                        return <DashedButton key={`${category.id}-${index}`}>
+                            {getCategoryIcon(category.name)}
+                        </DashedButton>
+                    })}
                 </div>
                 <CourseStatusBadge status={"free"}/>
             </div>

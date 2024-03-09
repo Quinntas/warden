@@ -2,8 +2,12 @@ import {Button} from "@/components/ui/button";
 import {CourseReviewStar} from "@/app/course/[slug]/_components/course-review-star";
 import {getCourseReviews} from "@/lib/course/getCourseReviews";
 
-export async function CourseReviewsCount() {
-    const reviews = await getCourseReviews("a2fb1208-ecf4-40a1-827a-d319a42408cf")
+interface CourseReviewsCountProps {
+    course_id: string
+}
+
+export async function CourseReviewsCount(props: CourseReviewsCountProps) {
+    const reviews = await getCourseReviews(props.course_id)
 
     if (reviews.isError) return <p>{reviews.error}</p>
 

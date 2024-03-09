@@ -1,11 +1,24 @@
 import {cache} from "react";
 import {db} from "@/lib/database/lucia-database-adapter";
 import {eq} from "drizzle-orm";
-import {courseReviewTable, reviewTable} from "@/lib/database/database-tables";
+import {courseReviewTable, courseTable, reviewTable} from "@/lib/database/database-tables";
 
 
-export const getCourseReviews = cache(async (courseId: string) => {
+export const getCourseReviews = cache(async (courseSlug: string) => {
     try {
+        const courseId = await db
+            .select({
+                id: courseTable.id
+            })
+            .from(courseTable)
+            .where(eq(courseTable.slug, courseSlug))
+
+        if (!courseId || courseId.length === 0)
+            return {
+                error: "Course not found",
+                isError: true
+            }
+
         const res = await db
             .select({
                 id: courseReviewTable.reviewId,
@@ -16,7 +29,7 @@ export const getCourseReviews = cache(async (courseId: string) => {
             })
             .from(courseReviewTable)
             .fullJoin(reviewTable, eq(courseReviewTable.reviewId, reviewTable.id))
-            .where(eq(courseReviewTable.courseId, courseId))
+            .where(eq(courseReviewTable.courseId, courseId[0].id))
         return {
             reviews: res,
             isError: false

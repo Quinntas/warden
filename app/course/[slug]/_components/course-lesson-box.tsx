@@ -6,9 +6,6 @@ export function CourseLessonBox() {
 
         <div className={"grid grid-cols-1 sm:grid-cols-2 gap-[15px]"}>
             <LessonCard/>
-            <LessonCard/>
-            <LessonCard/>
-            <LessonCard/>
         </div>
     </>
 }
