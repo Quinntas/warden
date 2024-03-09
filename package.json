@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio"
   },
