@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const runtimeCaching = require("next-pwa/cache");
 
 const withPWA = require('next-pwa')({
     dest: 'public',
@@ -10,6 +11,7 @@ const withPWA = require('next-pwa')({
 module.exports = withPWA({
     reactStrictMode: true,
     transpilePackages: ["ui"],
+    runtimeCaching,
     images: {
         domains: ['i.imgur.com'],
     },
