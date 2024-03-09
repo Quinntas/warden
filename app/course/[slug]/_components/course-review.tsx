@@ -1,13 +1,18 @@
 import {Card, CardContent, CardHeader} from "@/components/ui/card";
 import {CourseReviewStar} from "@/app/course/[slug]/_components/course-review-star";
 
-export function CourseReview() {
-    return <Card>
+interface CourseReviewProps {
+    count: number
+    review: string
+}
+
+export function CourseReview(props: CourseReviewProps) {
+    return <Card className={"w-full"}>
         <CardHeader>
-            <CourseReviewStar count={4.5}/>
+            <CourseReviewStar count={props.count}/>
         </CardHeader>
         <CardContent>
-            <p className={"text-sm"}>Wow thats a noice class my guy, gratz</p>
+            <p className={"text-sm"}>{props.review}</p>
         </CardContent>
     </Card>
 }

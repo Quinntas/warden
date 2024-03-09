@@ -6,18 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/course/course-card-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-card-box.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_components/course/course-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/page-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/page-box.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/user-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/user-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-overview-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-overview-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/asdasdasd.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-review.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-review.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-box.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-count.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-count.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-student-badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-student-badge.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-teacher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-teacher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/lesson/lesson-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/lesson/lesson-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/database-tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/database-tables.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1709846327168" duration="2451000" />
       <workItem from="1709848801857" duration="12671000" />
       <workItem from="1709917502303" duration="7254000" />
-      <workItem from="1709925013661" duration="6895000" />
+      <workItem from="1709925013661" duration="16143000" />
     </task>
     <servers />
   </component>

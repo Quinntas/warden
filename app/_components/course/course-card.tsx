@@ -10,13 +10,18 @@ import {useRouter} from "next/navigation";
 
 interface CourseCardProps {
     className?: string;
+    price: number
+    title: string
+    description: string
+    categories: string[]
+    slug: string
 }
 
 export function CourseCard(props: CourseCardProps) {
     const router = useRouter()
 
     return <Card className={cn("group w-full cursor-pointer bg-grid-default", props.className)} onClick={() => {
-        router.push("/course/1")
+        router.push(`/course/${props.slug}`)
     }}>
         <CardHeader>
             <div className={"flex items-center justify-between"}>
@@ -32,9 +37,8 @@ export function CourseCard(props: CourseCardProps) {
             </div>
         </CardHeader>
         <CardContent>
-            <h3 className={"text-2xl font-semibold"}>Node.js and TypeScript</h3>
-            <p className={"text-sm text-muted-foreground"}>Learn how to build a REST API using Node.js and
-                TypeScript</p>
+            <h3 className={"text-2xl font-semibold"}>{props.title}</h3>
+            <p className={"text-sm text-muted-foreground"}>{props.description}</p>
         </CardContent>
     </Card>
 }

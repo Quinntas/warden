@@ -4,16 +4,19 @@ import {PageBox} from "@/app/_components/page-box";
 import {CoursePresentation} from "@/app/course/[slug]/_components/course-presentation";
 import {CourseLessonBox} from "@/app/course/[slug]/_components/course-lesson-box";
 import {CourseReviewsBox} from "@/app/course/[slug]/_components/course-reviews-box";
+import {Suspense} from "react";
 
-export default function Course() {
+export default async function Course({params}: { params: { slug: string } }) {
     return <PageBox>
         <Navbar/>
 
-        <CoursePresentation/>
+        <CoursePresentation slug={params.slug}/>
 
         <CourseLessonBox/>
 
-        <CourseReviewsBox/>
+        <Suspense>
+            <CourseReviewsBox/>
+        </Suspense>
 
         <Footer/>
     </PageBox>
