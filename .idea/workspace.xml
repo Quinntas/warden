@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/course/course-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_components/course/course-status-badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-status-badge.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +101,7 @@
       <workItem from="1709846327168" duration="2451000" />
       <workItem from="1709848801857" duration="12671000" />
       <workItem from="1709917502303" duration="7254000" />
-      <workItem from="1709925013661" duration="20016000" />
+      <workItem from="1709925013661" duration="20124000" />
     </task>
     <servers />
   </component>

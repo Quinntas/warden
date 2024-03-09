@@ -13,7 +13,7 @@ export function CourseStatusBadge({price}: { price: number }) {
                 </Badge>
             case price > 0:
                 return <Badge>
-                    <span className={"font-semibold"}>R$ 60.00</span>
+                    <span className={"font-semibold"}>R$ {price}</span>
                 </Badge>
         }
     }
