@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-count.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-count.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-student-badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-student-badge.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <workItem from="1709917502303" duration="7254000" />
       <workItem from="1709925013661" duration="20194000" />
       <workItem from="1709990360880" duration="4204000" />
-      <workItem from="1709994605883" duration="1627000" />
+      <workItem from="1709994605883" duration="2408000" />
     </task>
     <servers />
   </component>

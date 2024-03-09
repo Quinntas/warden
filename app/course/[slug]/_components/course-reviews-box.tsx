@@ -8,7 +8,8 @@ interface CourseReviewsBoxProps {
 export async function CourseReviewsBox(props: CourseReviewsBoxProps) {
     const reviews = await getCourseReviews(props.courseSlug)
 
-    if (reviews.isError || !reviews.reviews) return <p>{reviews.error}</p>
+    if (reviews.isError || !reviews.reviews || reviews.reviews.length === 0)
+        return <></>
 
     return <>
         <h1 className={"text-center font-semibold text-2xl my-[20px]"}>Reviews</h1>

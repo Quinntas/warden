@@ -6,7 +6,8 @@ interface CourseStudentBadgeProps {
 }
 
 export async function CourseStudentBadge(props: CourseStudentBadgeProps) {
-    return <Button variant={"outline"} className={"gap-2 py-2 px-4 flex items-center"}>
+    return <Button variant={"outline"}
+                   className={"gap-2 py-2 px-4 flex items-center border-dashed pointer-events-none"}>
         <span className={"font-normal text-md"}>{props.count}</span>
         <FaRegUser size={13}/>
     </Button>
