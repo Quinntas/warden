@@ -2,6 +2,7 @@ import {CourseCard} from "@/app/_components/course/course-card";
 import {getAllCourses} from "@/lib/course/getAllCourses";
 import {cn} from "@/lib/utils";
 
+
 export async function CourseCardBox() {
     const courses = await getAllCourses()
 

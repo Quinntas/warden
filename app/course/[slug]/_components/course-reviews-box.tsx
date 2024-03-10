@@ -1,22 +1,17 @@
 import {CourseReview} from "@/app/course/[slug]/_components/course-review";
-import {getCourseReviews} from "@/lib/course/getCourseReviews";
+import {Review} from "@/lib/database/types/review";
 
 interface CourseReviewsBoxProps {
-    courseSlug: string
+    reviews: Review[]
 }
 
 export async function CourseReviewsBox(props: CourseReviewsBoxProps) {
-    const reviews = await getCourseReviews(props.courseSlug)
-
-    if (reviews.isError || !reviews.reviews || reviews.reviews.length === 0)
-        return <></>
-
     return <>
         <h1 className={"text-center font-semibold text-2xl my-[20px]"}>Reviews</h1>
 
         <div className={"grid sm:grid-cols-2 gap-[15px] flex-col"}>
-            {reviews.reviews.length > 0 ?
-                reviews.reviews.map((review, index) => {
+            {props.reviews.length > 0 ?
+                props.reviews.map((review, index) => {
                     return <CourseReview
                         key={`course-review-${review.id}-${index}`}
                         count={review.rating!}

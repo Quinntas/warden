@@ -7,14 +7,16 @@
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_components/course/course-card-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-card-box.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/course/course-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/course/course-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/page-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/page-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-enroll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-lesson-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-lesson-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-box.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/combo-box-responsive.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/combo-box-responsive.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/otp-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/otp-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/toaster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/toaster.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-count.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-reviews-count.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-teacher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-teacher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/course/getCourse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/course/getCourse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +119,7 @@
       <workItem from="1709990360880" duration="4204000" />
       <workItem from="1709994605883" duration="5309000" />
       <workItem from="1710085323278" duration="2508000" />
-      <workItem from="1710090717557" duration="2225000" />
+      <workItem from="1710090717557" duration="7498000" />
     </task>
     <servers />
   </component>
