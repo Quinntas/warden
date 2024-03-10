@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/_components/course-presentation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +59,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.5",
-    "last_opened_file_path": "C:/Users/quintas/Documents/Gitpica/warden_2/lib/course",
+    "last_opened_file_path": "C:/Users/quintas/Documents/Gitpica/warden_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,12 +83,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\quintas\Documents\Gitpica\warden_2" />
+      <recent name="C:\Users\quintas\Documents\Gitpica\warden_2\app" />
       <recent name="C:\Users\quintas\Documents\Gitpica\warden_2\lib\course" />
       <recent name="C:\Users\quintas\Documents\Gitpica\warden\app\signup" />
       <recent name="C:\Users\quintas\Documents\Gitpica\warden\app" />
-      <recent name="C:\Users\quintas\Documents\Gitpica\warden" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\quintas\Documents\Gitpica\warden_2\public" />
       <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\lib\providers" />
       <recent name="C:\Users\quintas\Documents\Gitpica\nextjs-template\@types" />
     </key>
@@ -105,7 +110,8 @@
       <workItem from="1709917502303" duration="7254000" />
       <workItem from="1709925013661" duration="20194000" />
       <workItem from="1709990360880" duration="4204000" />
-      <workItem from="1709994605883" duration="4579000" />
+      <workItem from="1709994605883" duration="5309000" />
+      <workItem from="1710085323278" duration="2445000" />
     </task>
     <servers />
   </component>

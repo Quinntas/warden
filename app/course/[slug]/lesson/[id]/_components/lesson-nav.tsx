@@ -2,6 +2,7 @@ import {Button} from "@/components/ui/button";
 import {RiCheckboxBlankCircleFill, RiCheckboxBlankCircleLine} from "react-icons/ri";
 import Link from "next/link";
 import {getLessons} from "@/lib/course/getLessons";
+import {Suspense} from "react";
 
 interface LessonNavItemProps {
     title: string;
@@ -10,6 +11,7 @@ interface LessonNavItemProps {
     link: string
 }
 
+// TODO: check for watched lessons
 function LessonNavItem(props: LessonNavItemProps) {
     return <Button
         variant={"outline"}
@@ -43,12 +45,16 @@ export async function LessonNav(props: LessonNavProps) {
 
     return <div className={"grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[15px] mt-[4px] sm:mt-0"}>
         {lessons.lessons.map((lesson, index) => {
-            return <LessonNavItem
-                title={`${lesson.order}. ${lesson.title} - ${numberToTime(lesson.duration)}`}
-                isWatched={false}
-                isCurrent={lesson.id === props.id}
-                link={`/course/${props.courseSlug}/lesson/${lesson.id}`}
-                key={`lesson-nav-${lesson.id}-${index}`}/>
+            return <>
+                <Suspense>
+                    <LessonNavItem
+                        title={`${lesson.order}. ${lesson.title} - ${numberToTime(lesson.duration)}`}
+                        isWatched={false}
+                        isCurrent={lesson.id === props.id}
+                        link={`/course/${props.courseSlug}/lesson/${lesson.id}`}
+                        key={`lesson-nav-${lesson.id}-${index}`}/>
+                </Suspense>
+            </>
         })}
     </div>
 }

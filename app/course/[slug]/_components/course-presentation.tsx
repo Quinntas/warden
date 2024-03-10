@@ -29,10 +29,10 @@ export async function CoursePresentation(props: CoursePresentationProps) {
             <p className={"text-muted-foreground line-clamp-4 h-auto break-words"}>{course.course.description}</p>
 
             <Suspense>
-                <CourseCategories coruse_id={course.course.id}/>
+                <CourseCategories courseId={course.course.id}/>
             </Suspense>
 
-            <div className={"flex items-center gap-[15px]"}>
+            <div className={"flex items-center gap-[4px]"}>
                 <Suspense>
                     <CourseStudentBadge count={course.course!.enrolled}/>
                 </Suspense>
