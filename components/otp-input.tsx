@@ -48,7 +48,7 @@ export function OtpInput() {
                 <>
                     <div className="flex">
                         {slots.slice(0, 3).map((slot, idx) => (
-                            <Slot key={idx} {...slot} />
+                            <Slot key={`opt-input-${idx}`} {...slot} />
                         ))}
                     </div>
 

@@ -13,6 +13,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@lucia-auth/adapter-drizzle": "^1.0.2",
+    "@mantine/hooks": "^7.6.1",
     "@monaco-editor/react": "^4.6.0",
     "@node-rs/argon2": "^1.8.0",
     "@node-rs/bcrypt": "^1.10.0",

@@ -11,6 +11,9 @@ dependencies:
   '@lucia-auth/adapter-drizzle':
     specifier: ^1.0.2
     version: 1.0.2(lucia@3.0.1)
+  '@mantine/hooks':
+    specifier: ^7.6.1
+    version: 7.6.1(react@18.2.0)
   '@monaco-editor/react':
     specifier: ^4.6.0
     version: 4.6.0(monaco-editor@0.47.0)(react-dom@18.2.0)(react@18.2.0)
@@ -2058,6 +2061,14 @@ packages:
       lucia: 3.x
     dependencies:
       lucia: 3.0.1
+    dev: false
+
+  /@mantine/hooks@7.6.1(react@18.2.0):
+    resolution: {integrity: sha512-zsOGzFRcQZuER2rzAjfrAqp98W7WCFA43nF1QZUKV7AHTq8q1mtr3DOhFfO3/CA+t1lai68gp1guVcIhP4lrwQ==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@monaco-editor/loader@1.4.0(monaco-editor@0.47.0):

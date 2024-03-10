@@ -26,7 +26,7 @@ export function CourseCard(props: CourseCardProps) {
             <div className={"flex items-center justify-between"}>
                 <div className={"flex gap-1"}>
                     {props.categories.map((category, index) => {
-                        return <DashedButton key={`${category.id}-${index}`}>
+                        return <DashedButton key={`course-card-btn-${category.id}-${index}`}>
                             {getCategoryIcon(category.name)}
                         </DashedButton>
                     })}

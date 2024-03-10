@@ -16,7 +16,7 @@ export async function CourseCardBox() {
                 price={course.price!}
                 categories={course.categories!}
                 className={cn(index === 0 && "sm:col-span-2")}
-                key={`${course.id}-${index}`}/>
+                key={`course-card-${course.id}-${index}`}/>
         })}
     </div>
 }

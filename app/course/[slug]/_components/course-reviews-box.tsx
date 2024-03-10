@@ -18,7 +18,7 @@ export async function CourseReviewsBox(props: CourseReviewsBoxProps) {
             {reviews.reviews.length > 0 ?
                 reviews.reviews.map((review, index) => {
                     return <CourseReview
-                        key={`${review.id}-${index}`}
+                        key={`course-review-${review.id}-${index}`}
                         count={review.rating!}
                         review={review.review!}
                     />

@@ -107,9 +107,9 @@ function StatusList({
             <CommandList>
                 <CommandEmpty>Nenhum encontrado.</CommandEmpty>
                 <CommandGroup>
-                    {items.map((status) => (
+                    {items.map((status, index) => (
                         <CommandItem
-                            key={status.value}
+                            key={`status-list-${status.value}-${index}`}
                             value={status.value}
                             onSelect={(value) => {
                                 setSelectedStatus(

@@ -52,7 +52,7 @@ export async function LessonNav(props: LessonNavProps) {
                         isWatched={false}
                         isCurrent={lesson.id === props.id}
                         link={`/course/${props.courseSlug}/lesson/${lesson.id}`}
-                        key={`lesson-nav-${lesson.id}-${index}`}/>
+                        key={`course-lesson-nav-${lesson.id}-${index}`}/>
                 </Suspense>
             </>
         })}

@@ -21,7 +21,7 @@ export async function CourseLessonBox(props: CourseLessonBoxProps) {
                     order={lesson.order}
                     id={lesson.id}
                     courseSlug={props.courseSlug}
-                    key={`course-${lesson.id}-${index}`}/>
+                    key={`course-lesson-box-${lesson.id}-${index}`}/>
             })}
         </div>
     </>
