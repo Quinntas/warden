@@ -13,7 +13,8 @@ export const getAllCourses = cache(async () => {
                 description: courseTable.description,
                 price: courseTable.price,
                 categoryId: courseCategoryTable.categoryId,
-                categoryName: categoryTable.name
+                categoryName: categoryTable.name,
+                updated_at: courseTable.updated_at
             })
             .from(courseTable)
             .innerJoin(courseCategoryTable, eq(courseTable.id, courseCategoryTable.courseId))

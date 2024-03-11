@@ -15,7 +15,10 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
     title: "Warden",
     description: "Warden",
-    robots: "follow, index",
+    robots: {
+        follow: true,
+        index: true,
+    }
 };
 
 export default function RootLayout({

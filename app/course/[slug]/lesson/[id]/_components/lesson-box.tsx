@@ -18,7 +18,7 @@ export async function LessonBox(props: LessonBoxProps) {
 
     return <>
         <Suspense>
-            <div className={"w-[100%] h-[300px] lg:h-[600px]"}>
+            <div className={"w-[100%] h-[300px] lg:h-[600px] "}>
                 <VideoPlayer
                     url={lesson.lesson.videoUrl}/>
             </div>
