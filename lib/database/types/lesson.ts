@@ -7,4 +7,5 @@ export interface Lesson {
     videoUrl: string | null,
     viewCount: number | null,
     created_at: Date | null,
+    updated_at: Date | null,
 }

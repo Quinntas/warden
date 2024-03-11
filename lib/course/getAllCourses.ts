@@ -6,10 +6,8 @@ import {RawCourse} from "@/lib/database/types/course";
 
 export const getAllCoursesAndOnlyCourses = cache(async () => {
     try {
-        const courseRes: Pick<RawCourse, "id">[] = await db
-            .select({
-                id: courseTable.id,
-            })
+        const courseRes: RawCourse[] = await db
+            .select()
             .from(courseTable)
         return {
             courses: courseRes,
