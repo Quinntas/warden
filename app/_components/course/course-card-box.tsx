@@ -10,14 +10,16 @@ export async function CourseCardBox() {
 
     return <div className={"grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[15px] my-[20px]"}>
         {courses.courses!.map((course, index) => {
-            return <CourseCard
-                slug={course.slug!}
-                title={course.title!}
-                description={course.description!}
-                price={course.price!}
-                categories={course.categories!}
-                className={cn(index === 0 && "sm:col-span-2")}
-                key={`course-card-${course.id}-${index}`}/>
+            return <>
+                <CourseCard
+                    slug={course.slug!}
+                    title={course.title!}
+                    description={course.description!}
+                    price={course.price!}
+                    categories={course.categories!}
+                    containerClassName={cn(index === 0 && "sm:col-span-2")}
+                    key={`course-card-${course.id}-${index}`}/>
+            </>
         })}
     </div>
 }

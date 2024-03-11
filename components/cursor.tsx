@@ -2,6 +2,8 @@
 
 import {FC, useEffect, useRef} from "react";
 import {useMediaQuery} from "@/components/ui/hooks/use-media-query";
+import {useTheme} from "next-themes";
+import {cn} from "@/lib/utils";
 
 const Cursor: FC = () => {
     const isDesktop = useMediaQuery("(min-width: 768px)")
@@ -55,10 +57,15 @@ const Cursor: FC = () => {
 
     if (!isDesktop) return null;
 
+    const {theme} = useTheme()
+
     return (
         <div
             ref={cursorRef}
-            className="w-7 h-7 bg-transparent border border-white rounded-full fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden transition duration-75"
+            className={cn(
+                "w-7 h-7 bg-transparent border rounded-full fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden transition duration-75",
+                theme === "dark" ? "border-white" : "border-black",
+            )}
         ></div>
     );
 };

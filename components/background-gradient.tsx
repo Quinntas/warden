@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {motion} from "framer-motion";
 import {cn} from "@/lib/utils";
@@ -22,7 +24,7 @@ export const BackgroundGradient = ({
         },
     };
     return (
-        <div className={cn("relative p-[4px] group", containerClassName)}>
+        <div className={cn("relative group", containerClassName)}>
             <motion.div
                 variants={animate ? variants : undefined}
                 initial={animate ? "initial" : undefined}
