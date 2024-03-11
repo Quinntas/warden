@@ -7,6 +7,7 @@ import {Suspense} from "react";
 import {CourseCategories} from "@/app/course/[slug]/_components/course-categories";
 import {validateSession} from "@/lib/auth/validate-session";
 import {Course} from "@/lib/database/types/course";
+import {EnrollButtonSkeleton} from "@/app/course/[slug]/_components/enroll-button";
 
 interface CoursePresentationProps {
     course: Course
@@ -29,8 +30,7 @@ export async function CoursePresentation(props: CoursePresentationProps) {
                 <CourseReviewsCount reviews={props.course.reviews}/>
             </div>
 
-            {/*TODO: enroll placeholder for loading*/}
-            <Suspense fallback={<span>Loading...</span>}>
+            <Suspense fallback={<EnrollButtonSkeleton/>}>
                 <CourseEnroll price={props.course.price} courseId={props.course.id} userId={user?.id!}/>
             </Suspense>
 
