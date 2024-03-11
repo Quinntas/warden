@@ -19,6 +19,7 @@ import {DatabaseUserAttributes} from "@/lib/auth/lucia";
 import React from "react";
 import {logout} from "@/lib/auth/_actions/logout";
 import {toast} from "sonner";
+import {useRouter} from "next/navigation";
 
 interface UserNavProps {
     user: DatabaseUserAttributes
@@ -26,6 +27,7 @@ interface UserNavProps {
 
 export function UserNav(props: UserNavProps) {
     const themeState = useTheme()
+    const router = useRouter()
 
     return <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -69,10 +71,11 @@ export function UserNav(props: UserNavProps) {
             </DropdownMenuItem>
             <DropdownMenuSeparator/>
             <DropdownMenuItem className={"cursor-pointer"} onClick={() => {
-                logout().then((res) => {
+                return logout().then((res) => {
                     if (res.error) {
                         toast(res.error)
                     } else {
+                        router.refresh()
                         toast("Logged out")
                     }
                 })
