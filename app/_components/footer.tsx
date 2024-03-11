@@ -8,9 +8,9 @@ export function Footer() {
         <div className={"flex items-center justify-between text-[12px] text-muted-foreground px-[4px]"}>
             <Linker target={"_blank"} href={"https://twitter.com/https_quintas"} text={"@https_quintas"}/>
             <div className={"flex gap-1"}>
-                <Linker href={"#"} text={"Terms of use"}/>
+                <Linker href={"/terms"} text={"Terms of use"}/>
                 <span>/</span>
-                <Linker href={"#"} text={"Privacy Policy"}/>
+                <Linker href={"/privacy"} text={"Privacy Policy"}/>
             </div>
         </div>
     </footer>

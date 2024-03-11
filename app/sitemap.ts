@@ -32,6 +32,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: `${process.env.NEXT_PUBLIC_APP_URL}/signup`
         },
+        {
+            url: `${process.env.NEXT_PUBLIC_APP_URL}/terms`
+        },
+        {
+            url: `${process.env.NEXT_PUBLIC_APP_URL}/privacy`
+        },
         ...courseUrls,
         ...lessonUrls
     ]
