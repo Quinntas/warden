@@ -71,11 +71,10 @@ export function UserNav(props: UserNavProps) {
             </DropdownMenuItem>
             <DropdownMenuSeparator/>
             <DropdownMenuItem className={"cursor-pointer"} onClick={() => {
-                return logout().then((res) => {
+                logout().then((res) => {
                     if (res.error) {
                         toast(res.error)
                     } else {
-                        router.refresh()
                         toast("Logged out")
                     }
                 })
