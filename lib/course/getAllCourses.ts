@@ -2,6 +2,26 @@ import {cache} from "react";
 import {db} from "@/lib/database/lucia-database-adapter";
 import {categoryTable, courseCategoryTable, courseTable} from "@/lib/database/database-tables";
 import {eq} from "drizzle-orm";
+import {RawCourse} from "@/lib/database/types/course";
+
+export const getAllCoursesAndOnlyCourses = cache(async () => {
+    try {
+        const courseRes: Pick<RawCourse, "id">[] = await db
+            .select({
+                id: courseTable.id,
+            })
+            .from(courseTable)
+        return {
+            courses: courseRes,
+            isError: false
+        }
+    } catch (err: any) {
+        return {
+            error: err.message,
+            isError: true
+        }
+    }
+})
 
 export const getAllCourses = cache(async () => {
     try {
@@ -46,7 +66,6 @@ export const getAllCourses = cache(async () => {
             isError: false
         }
     } catch (err: any) {
-        console.log(err)
         return {
             error: err.message,
             isError: true

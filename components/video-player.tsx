@@ -23,7 +23,7 @@ export function VideoPlayer(props: VideoPlayerProps) {
 
     return <>
         <ReactPlayer
-            fallback={<span>Loading</span>}
+            fallback={<span>Loading video...</span>}
             onReady={(player) => props.onReady && props.onReady(player)}
             onStart={() => props.onStart && props.onStart()}
             onProgress={(progress) => props.onProgress && props.onProgress(progress.playedSeconds)}

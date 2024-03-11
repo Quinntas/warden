@@ -3,12 +3,29 @@ import {Footer} from "@/app/_components/footer";
 import {PageBox} from "@/app/_components/page-box";
 import {validateSession} from "@/lib/auth/validate-session";
 import {getEnrolledStudent} from "@/lib/course/getEnrolledStudent";
-import {redirect} from "next/navigation";
+import {notFound, redirect} from "next/navigation";
 import {LessonBox} from "@/app/course/[slug]/lesson/[id]/_components/lesson-box";
-import {Suspense} from "react";
 import {Metadata} from "next";
 import {getLesson} from "@/lib/course/getLesson";
+import {getAllCourses} from "@/lib/course/getAllCourses";
+import {getAllLessonsWithCourseId} from "@/lib/course/getAllLessons";
 
+export async function generateStaticParams() {
+    const courses = await getAllCourses()
+    if (courses.isError || !courses.courses) return []
+
+    let params: { id: string, slug: string }[] = []
+
+    for (const course of courses.courses) {
+        const lessons = await getAllLessonsWithCourseId(course.id)
+        if (lessons.isError || !lessons.lessons) continue
+        for (const lesson of lessons.lessons) {
+            params.push({id: lesson.id!, slug: course.slug})
+        }
+    }
+
+    return params
+}
 
 export async function generateMetadata({params}: { params: { id: string } }): Promise<Metadata> {
     const lessonRes = await getLesson(params.id)
@@ -29,14 +46,19 @@ export default async function Lesson({params}: { params: { slug: string, id: str
     if (!user)
         return redirect(`/course/${params.slug}`)
 
-    const enrolled = await getEnrolledStudent(params.slug, user.id)
+    const enrolledRes = await getEnrolledStudent(params.slug, user.id)
+
+    if (enrolledRes.isError || !enrolledRes.isEnrolled)
+        return redirect(`/course/${params.slug}`)
+
+    const lessonRes = await getLesson(params.id)
+
+    if (lessonRes.isError || !lessonRes.lesson) return notFound()
 
     return <PageBox>
         <Navbar/>
 
-        <Suspense>
-            <LessonBox slug={params.slug} id={params.id} isEnrolled={enrolled.isEnrolled!}/>
-        </Suspense>
+        <LessonBox slug={params.slug} id={params.id} lesson={lessonRes.lesson}/>
 
         <Footer/>
     </PageBox>

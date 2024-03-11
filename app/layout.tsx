@@ -6,6 +6,7 @@ import {ThemeProvider} from "@/lib/providers/theme-provider";
 import {Toaster} from "@/components/ui/sonner"
 import {Analytics} from "@vercel/analytics/react"
 import {SpeedInsights} from "@vercel/speed-insights/next"
+import Cursor from "@/components/cursor";
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -13,8 +14,11 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-    title: "Warden",
-    description: "Warden",
+    title: {
+        default: "Warden",
+        template: "%s - Warden"
+    },
+    description: "Warden provides high quality courses for developers and designers. Learn from the best and improve your skills.",
     robots: {
         follow: true,
         index: true,
@@ -42,6 +46,7 @@ export default function RootLayout({
         >
 
             {children}
+            <Cursor/>
             <Toaster/>
         </ThemeProvider>
         <Analytics/>

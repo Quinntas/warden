@@ -71,7 +71,11 @@ export const getCourse = cache(async (slug: string): Promise<GetCourseResponse> 
                     title: lessonTable.title,
                     description: lessonTable.description,
                     duration: lessonTable.duration,
-                    order: lessonTable.order
+                    order: lessonTable.order,
+                    created_at: lessonTable.created_at,
+                    updated_at: lessonTable.updated_at,
+                    videoUrl: lessonTable.videoUrl,
+                    viewCount: lessonTable.viewCount
                 }
             )
             .from(lessonTable)

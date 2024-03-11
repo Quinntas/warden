@@ -2,6 +2,12 @@ import {PageBox} from "@/app/_components/page-box";
 import Link from "next/link";
 import {SignupForm} from "@/app/signup/_components/signup-form";
 import {Suspense} from "react";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Signup",
+    description: "Warden provides high quality courses for developers and designers. Learn from the best and improve your skills.",
+};
 
 export default function Login() {
     return <PageBox className={"justify-center items-center w-full h-screen"}>

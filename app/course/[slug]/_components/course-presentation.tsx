@@ -30,7 +30,7 @@ export async function CoursePresentation(props: CoursePresentationProps) {
             </div>
 
             {/*TODO: enroll placeholder for loading*/}
-            <Suspense>
+            <Suspense fallback={<span>Loading...</span>}>
                 <CourseEnroll price={props.course.price} courseId={props.course.id} userId={user?.id!}/>
             </Suspense>
 
