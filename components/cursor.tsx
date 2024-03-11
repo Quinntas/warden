@@ -21,6 +21,8 @@ const Cursor: FC = () => {
         y: 0,
     });
 
+    const {theme} = useTheme()
+
     useEffect(() => {
         if (window.matchMedia("(pointer: coarse)").matches) return;
 
@@ -57,7 +59,6 @@ const Cursor: FC = () => {
 
     if (!isDesktop) return null;
 
-    const {theme} = useTheme()
 
     return (
         <div
