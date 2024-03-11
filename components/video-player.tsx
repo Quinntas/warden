@@ -2,7 +2,6 @@
 
 
 import dynamic from 'next/dynamic'
-import {useRef} from "react";
 
 const ReactPlayer = dynamic(() => import("react-player"), {ssr: false});
 
@@ -19,8 +18,6 @@ interface VideoPlayerProps {
 }
 
 export function VideoPlayer(props: VideoPlayerProps) {
-    const ref = useRef(null);
-
     return <>
         <ReactPlayer
             fallback={<span>Loading video...</span>}
@@ -34,7 +31,6 @@ export function VideoPlayer(props: VideoPlayerProps) {
             playsinline
             controls
             volume={0.5}
-            ref={ref}
             width={"100%"}
             height={"100%"}
             style={{
