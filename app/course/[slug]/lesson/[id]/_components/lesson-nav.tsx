@@ -3,23 +3,26 @@ import {RiCheckboxBlankCircleFill, RiCheckboxBlankCircleLine} from "react-icons/
 import Link from "next/link";
 import {getLessons} from "@/lib/course/getLessons";
 import {Suspense} from "react";
+import {getLessonWatch} from "@/lib/course/lessonWatch";
 
 interface LessonNavItemProps {
     title: string;
-    isWatched: boolean;
     isCurrent: boolean
     link: string
+    lessonId: string
+    userId: string
 }
 
-// TODO: check for watched lessons
-function LessonNavItem(props: LessonNavItemProps) {
+async function LessonNavItem(props: LessonNavItemProps) {
+    const lessonWatch = await getLessonWatch(props.lessonId, props.userId)
+
     return <Button
         variant={"outline"}
         disabled={props.isCurrent}
-        className={"w-full  border-dashed bg-grid-default"}>
+        className={"w-full border-dashed bg-grid-default"}>
         <Link href={props.link} className={"font-[500px] text-lg flex gap-2 items-center justify-between w-full"}>
             <span>{props.title}</span>
-            {props.isWatched ?
+            {!lessonWatch.isError && lessonWatch.lessonWatch ?
                 <RiCheckboxBlankCircleFill size={18} color={"purple"}/> :
                 <RiCheckboxBlankCircleLine size={18} color={"purple"}/>
             }</Link>
@@ -35,6 +38,7 @@ function numberToTime(number: number) {
 interface LessonNavProps {
     id: string
     courseSlug: string
+    userId: string
 }
 
 
@@ -48,8 +52,9 @@ export async function LessonNav(props: LessonNavProps) {
             return <>
                 <Suspense>
                     <LessonNavItem
+                        lessonId={lesson.id}
                         title={`${lesson.order}. ${lesson.title} - ${numberToTime(lesson.duration)}`}
-                        isWatched={false}
+                        userId={props.userId}
                         isCurrent={lesson.id === props.id}
                         link={`/course/${props.courseSlug}/lesson/${lesson.id}`}
                         key={`course-lesson-nav-${lesson.id}-${index}`}/>

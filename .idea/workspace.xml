@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e289d970-cfcd-498c-8db8-5837eb8cb137" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/_components/lesson-nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[slug]/lesson/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/video-player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/video-player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/database/database-tables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/database/database-tables.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +115,8 @@
       <workItem from="1710085323278" duration="2508000" />
       <workItem from="1710090717557" duration="17237000" />
       <workItem from="1710161665169" duration="624000" />
-      <workItem from="1710163700332" duration="1473000" />
+      <workItem from="1710163700332" duration="3516000" />
+      <workItem from="1710256419014" duration="3832000" />
     </task>
     <servers />
   </component>

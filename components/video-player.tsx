@@ -2,6 +2,7 @@
 
 
 import dynamic from 'next/dynamic'
+import React from "react";
 
 const ReactPlayer = dynamic(() => import("react-player"), {ssr: false});
 
@@ -43,7 +44,6 @@ export function VideoPlayer(props: VideoPlayerProps) {
                         controlsList: 'nodownload'
                     },
                 },
-
             }}
             url={props.url}/>
     </>

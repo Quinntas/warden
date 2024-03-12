@@ -9,6 +9,7 @@ import {Metadata} from "next";
 import {getLesson} from "@/lib/course/getLesson";
 import {getAllCourses} from "@/lib/course/getAllCourses";
 import {getAllLessonsWithCourseId} from "@/lib/course/getAllLessons";
+import {createLessonWatch, getLessonWatch} from "@/lib/course/lessonWatch";
 
 export async function generateStaticParams() {
     const courses = await getAllCourses()
@@ -55,10 +56,18 @@ export default async function Lesson({params}: { params: { slug: string, id: str
 
     if (lessonRes.isError || !lessonRes.lesson) return notFound()
 
+    await createLessonWatch(params.id, user.id, 0)
+    const watchedRes = await getLessonWatch(params.id, user.id)
+
     return <PageBox>
         <Navbar/>
 
-        <LessonBox slug={params.slug} id={params.id} lesson={lessonRes.lesson}/>
+        <LessonBox
+            userId={user.id}
+            slug={params.slug}
+            id={params.id}
+            lesson={lessonRes.lesson}
+            lessonWatch={watchedRes.lessonWatch!}/>
 
         <Footer/>
     </PageBox>

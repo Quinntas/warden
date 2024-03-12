@@ -1,5 +1,13 @@
 import {integer, json, pgTable, text, timestamp, varchar} from "drizzle-orm/pg-core";
 
+export const lessonWatchTable = pgTable("lesson_watch", {
+    id: text("id").primaryKey(),
+    userId: text("user_id").notNull().references(() => userTable.id).unique(),
+    lessonId: text("lesson_id").notNull().references(() => lessonTable.id).unique(),
+    timeWatched: integer("time_watched").notNull().default(0),
+    created_at: timestamp("created_at", {mode: 'date', withTimezone: true}).defaultNow().notNull(),
+    updated_at: timestamp("updated_at", {mode: 'date', withTimezone: true}).defaultNow().notNull()
+})
 
 export const courseCategoryTable = pgTable("course_category", {
     id: text("id").primaryKey(),
